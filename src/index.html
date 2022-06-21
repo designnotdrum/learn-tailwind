@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="winter" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwindin</title>
+    <link rel="stylesheet" href="/dist/output.css">
+</head>
+
+<body class="font-sans leading-normal tracking-normal debug-screens">
+    <div class="navbar bg-base-100 dark:bg-gray-800 dark:text-white shadow-lg">
+        <div class="navbar-start max-w-min">
+            <div class="dropdown">
+                <label tabindex="0" class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </label>
+                <ul tabindex="0"
+                    class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a>Item 1</a></li>
+                    <li><a>Item 2</a></li>
+                    <li tabindex="0">
+                        <a class="justify-between">
+                            Item 3
+                            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                viewBox="0 0 24 24">
+                                <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+                            </svg>
+                        </a>
+                        <ul class="p-2 bg-base-100">
+                            <li><a>Submenu 1</a></li>
+                            <li><a>Submenu 2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+        </div>
+        <div class="navbar-center flex grow items-start">
+            <ul class="menu menu-horizontal hidden md:inline-flex lg:inline-flex p-0">
+                <li><a>Item 1</a></li>
+                <li tabindex="0">
+                    <a>Item 2</a>
+                </li>
+                <li>
+                    <a>
+                        Item 3
+                        <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            viewBox="0 0 24 24">
+                            <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+                        </svg>
+                    </a>
+                    <ul class="p-2 bg-base-100 shadow">
+                        <li><a>Submenu 1</a></li>
+                        <li><a>Submenu 2</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-end gap-1">
+            <div class="relative">
+                <label class="sr-only" for="search"> Search </label>
+
+                <input
+                    class="md:h-10 pl-4 pr-10 text-sm invisible md:visible bg-white dark:bg-gray-700 border-none rounded-full md:shadow lg:shadow w-0 md:w-full lg:w-full"
+                    id="search" type="search" placeholder="Search site..." />
+
+                <button
+                    class="absolute p-2 text-gray-600 bg-gray-50 dark:bg-gray-800 transition -translate-y-1/2 rounded-full hover:text-gray-700 dark:hover:text-white   dark:text-white top-1/2 right-1"
+                    type="button" aria-label="Submit Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </button>
+            </div>
+            <button class="btn btn-ghost btn-circle">
+                <div class="indicator">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                    </svg>
+                    <span class="badge badge-xs badge-primary indicator-item"></span>
+                </div>
+            </button>
+            <div class="divider-vertical"></div>
+            <div class="dropdown dropdown-end">
+                <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                    <div class="w-8 rounded-full">
+                        <img src="https://api.lorem.space/image/face?hash=33791" />
+                    </div>
+                </label>
+                <ul tabindex="0"
+                    class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+                    <li>
+                        <a class="justify-between">
+                            Profile
+                            <span class="badge">New</span>
+                        </a>
+                    </li>
+                    <li><a>Settings</a></li>
+                    <li><a>Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <section id="accent-bg" class="pt-20 px-16 pb-40 bg-gradient-to-r from-blue-500 to-blue-600"></section>
+    <main
+        class="p-8 mx-8 mb-8 -mt-48 flex flex-col h-5/6 border border-slate-100 rounded-lg bg-white shadow-md dark:bg-gray-800 dark:border-slate-900 dark:text-white">
+        <section class="flex flex-row w-full">
+            <section class="flex flex-col w-1/2 mt-2 content-start">
+                <h1 class="text-slate-600 dark:text-white text-4xl font-bold tracking-wide mb-2">Nick's Home</h1>
+                <div class="text-sm breadcrumbs">
+                    <ul>
+                        <li>
+                            <a>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li><a>Documents</a></li>
+                        <li>Add Document</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="flex flex-col w-1/2 mt-2 items-end justify-center">
+                <button class="btn btn-primary btn-xl gap-2 w-56 text-white">
+                    Create Project
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 -mt-px" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                    </svg>
+                </button>
+            </section>
+        </section>
+        <div class="divider mt-2 mb-6"></div>
+        <section class="flex flex-col md:flex-row lg:flex-row w-full">
+            <div id="onboarding-progress flex flex-col w-full mb-4">
+                <!-- Onboarding -->
+                <div
+                    class="card card-compact w-96 bg-base-100 text-sm p-1 shadow-lg bg-gradient-to-r from-blue-500 to-blue-600 dark:bg-gray-900">
+                    <div class="inner bg-white dark:bg-gray-900 rounded-xl p-6">
+                        <h3 class="text-sm font-semibold subpixel-antialiased uppercase">Onboarding progress</h3>
+                        <ul class="steps steps-vertical text-sm">
+                            <li data-content="✓" class="step step-primary">Set up your profile</li>
+                            <li data-content="✓" class="step step-primary">Visit the Home page</li>
+                            <li data-content="●" class="step">
+                                <span>
+                                    Import your <a class="link link-hover">Brand Tokens
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 -mt-px inline-grid"
+                                            viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                </span>
+                            </li>
+                            <li data-content="●" class="step">
+                                <span>
+                                    Create your first <a class="link link-hover">Library
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 -mt-px inline-grid"
+                                            viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                </span>
+                            </li>
+                            <li data-content="●" class="step">
+                                <span>
+                                    Create your first <a class="link link-hover">Module
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 -mt-px inline-grid"
+                                            viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                </span>
+                            </li>
+                            <li data-content="●" class="step">
+                                <span>
+                                    Create your first <a class="link link-hover">Email
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 -mt-px inline-grid"
+                                            viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                </span>
+                            </li>
+                        </ul>
+                        <div class="divider mt-4 mb-4"></div>
+                        <button class="btn btn-outline btn-sm">Dismiss</button>
+                    </div>
+                </div>
+            </div>
+            <div id="calendar-and-planner-container"
+                class="flex flex-col xl:flex-row  w-full xl:items-center xl:justify-around mt-4">
+                <div id="calendar-and-planner"
+                    class="w-96 xl:max-w-5xl flex flex-col xl:flex-row md:w-full shadow-lg lg:h-96 p-1 bg-base-300 dark:bg-gray-400 rounded-xl">
+                    <!-- Calendar -->
+                    <div id="calendar"
+                        class="md:p-8 p-5 w-96 dark:bg-gray-900 bg-white rounded-t-xl md:rounded-l-xl md:rounded-tr-none lg:rounded-l-xl lg:rounded h-auto">
+                        <div class="px-4 flex items-center justify-between">
+                            <span tabindex="0"
+                                class="focus:outline-none  text-sm font-bold dark:text-gray-100 text-gray-800">October
+                                2020</span>
+                            <div class="flex items-center">
+                                <button aria-label="calendar backward"
+                                    class="focus:text-gray-400 hover:text-gray-400 text-gray-800 dark:text-gray-100">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <polyline points="15 6 9 12 15 18" />
+                                    </svg>
+                                </button>
+                                <button aria-label="calendar forward"
+                                    class="focus:text-gray-400 hover:text-gray-400 ml-3 text-gray-800 dark:text-gray-100">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler  icon-tabler-chevron-right" width="24" height="24"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <polyline points="9 6 15 12 9 18" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between pt-12 overflow-x-auto">
+                            <table class="w-full">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="w-full flex justify-center">
+                                                <p
+                                                    class="text-sm font-light text-center text-gray-800 dark:text-gray-100">
+                                                    Mo</p>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="w-full flex justify-center">
+                                                <p
+                                                    class="text-sm font-light text-center text-gray-800 dark:text-gray-100">
+                                                    Tu</p>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="w-full flex justify-center">
+                                                <p
+                                                    class="text-sm font-light text-center text-gray-800 dark:text-gray-100">
+                                                    We</p>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="w-full flex justify-center">
+                                                <p
+                                                    class="text-sm font-light text-center text-gray-800 dark:text-gray-100">
+                                                    Th</p>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="w-full flex justify-center">
+                                                <p
+                                                    class="text-sm font-light text-center text-gray-800 dark:text-gray-100">
+                                                    Fr</p>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="w-full flex justify-center">
+                                                <p
+                                                    class="text-sm font-light text-center text-gray-800 dark:text-gray-100">
+                                                    Sa</p>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="w-full flex justify-center">
+                                                <p
+                                                    class="text-sm font-light text-center text-gray-800 dark:text-gray-100">
+                                                    Su</p>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="pt-6">
+                                            <div class="px-2 py-2 cursor-pointer flex w-full justify-center"></div>
+                                        </td>
+                                        <td class="pt-6">
+                                            <div class="px-2 py-2 cursor-pointer flex w-full justify-center"></div>
+                                        </td>
+                                        <td>
+                                            <div class="px-2 py-2 cursor-pointer flex w-full justify-center"></div>
+                                        </td>
+                                        <td class="pt-6">
+                                            <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                <a role="link" tabindex="0"
+                                                    class="focus:outline-none  focus:ring-2 focus:ring-offset-2 focus:ring-red-700 focus:bg-red-500 hover:bg-red-500 text-sm w-8 h-8 flex items-center justify-center text-gray-900 hover:text-white focus:text-white bg-red-300 rounded-full font-light">
+                                                    1
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td class="pt-6">
+                                            <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                <p class="text-sm text-gray-500 dark:text-gray-100 font-light">2
+                                                </p>
+                                            </div>
+                                        </td>
+                                        <td class="pt-6">
+                                            <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                <p class="text-sm text-gray-500 dark:text-gray-100">3</p>
+                                            </div>
+                                        </td>
+                                        <td class="pt-6">
+                                            <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                <p class="text-sm text-gray-500 dark:text-gray-100">4</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                <p class="text-sm text-gray-500 dark:text-gray-100 font-light">5
+                                                </p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                <p class="text-sm text-gray-500 dark:text-gray-100 font-light">6
+                                                </p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                <p class="text-sm text-gray-500 dark:text-gray-100 font-light">7
+                                                </p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="w-full h-full">
+                                                <div
+                                                    class="flex items-center justify-center w-full rounded-full cursor-pointer">
+                                                    <a role="link" tabindex="0"
+                                                        class="focus:outline-none  focus:ring-2 focus:ring-offset-2 focus:ring-blue-700 focus:bg-blue-500 hover:bg-blue-500 text-sm w-8 h-8 flex items-center justify-center font-light text-white bg-primary rounded-full">8</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                <p class="text-sm text-gray-500 dark:text-gray-100 font-light">9
+                                                </p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                <p class="text-sm text-gray-500 dark:text-gray-100">10</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                <p class="text-sm text-gray-500 dark:text-gray-100">11</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                <p class="text-sm text-gray-500 dark:text-gray-100 font-light">12
+                                                </p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                <p class="text-sm text-gray-500 dark:text-gray-100 font-light">13
+                                                </p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                <p class="text-sm text-gray-500 dark:text-gray-100 font-light">14
+                                                </p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                <p class="text-sm text-gray-500 dark:text-gray-100 font-light">15
+                                                </p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                <p class="text-sm text-gray-500 dark:text-gray-100 font-light">16
+                                                </p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                <p class="text-sm text-gray-500 dark:text-gray-100">17</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                <p class="text-sm text-gray-500 dark:text-gray-100">18</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                <p class="text-sm text-gray-500 dark:text-gray-100 font-light">19
+                                                </p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                <p class="text-sm text-gray-500 dark:text-gray-100 font-light">20
+                                                </p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                <p class="text-sm text-gray-500 dark:text-gray-100 font-light">21
+                                                </p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                <p class="text-sm text-gray-500 dark:text-gray-100 font-light">22
+                                                </p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                <p class="text-sm text-gray-500 dark:text-gray-100 font-light">23
+                                                </p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                <p class="text-sm text-gray-500 dark:text-gray-100">24</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                <p class="text-sm text-gray-500 dark:text-gray-100">25</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                <p class="text-sm text-gray-500 dark:text-gray-100 font-light">26
+                                                </p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                <p class="text-sm text-gray-500 dark:text-gray-100 font-light">27
+                                                </p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                <p class="text-sm text-gray-500 dark:text-gray-100 font-light">28
+                                                </p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                <p class="text-sm text-gray-500 dark:text-gray-100 font-light">29
+                                                </p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                <p class="text-sm text-gray-500 dark:text-gray-100 font-light">30
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- Planner -->
+                    <div id="planner"
+                        class="md:py-8 py-5 md:px-8 px-4 text-sm w-96 xl:w-2/3 dark:bg-gray-700 bg-gray-50 rounded-b-xl lg:rounded-r-xl lg:rounded-bl-none xl:rounded-r-xl xl:rounded-bl-none h-auto">
+                        <div class="px-4">
+                            <div class="border-b pb-4 border-gray-400 border-dashed">
+                                <span class="text-xs font-light leading-3 mb-1 badge badge-error badge-sm">
+                                    Oct 1 2020
+                                </span>
+                                <br>
+                                <a tabindex="0"
+                                    class="focus:outline-none text-sm md:text-lg font-light leading-5 text-gray-800 dark:text-gray-100 mt-2 link link-hover">
+                                    <b>Campaign A</b>
+                                    Landing Page launch is late!
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 -mt-px inline-grid"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="border-b pb-4 border-gray-400 border-dashed pt-5">
+                                <p class="text-xs font-light leading-3 mb-1 text-gray-500 dark:text-gray-300">10:00 AM
+                                </p>
+                                <a tabindex="0"
+                                    class="focus:outline-none text-sm md:text-lg font-light leading-5 text-gray-800 dark:text-gray-100 mt-2">Orientation
+                                    session with new hires</a>
+                            </div>
+                            <div class="border-b pb-4 border-gray-400 border-dashed pt-5">
+                                <p class="text-xs font-light leading-3 mb-1 text-gray-500 dark:text-gray-300">1:00 PM
+                                </p>
+                                <a tabindex="0"
+                                    class="focus:outline-none text-sm md:text-lg font-light leading-5 text-gray-800 dark:text-gray-100 mt-2">Zoom
+                                    call with design team</a>
+                                <p class="text-sm pt-2 leading-4 text-gray-600 dark:text-gray-300">
+                                    Discussion on UX sprint and Wireframe review</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

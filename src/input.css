@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-100 dark:bg-slate-900 h-screen w-screen;
+}
+
+.btn:focus {
+  @apply focus:outline-none focus:ring focus:ring-cyan-400;
+}
+
+.danger {
+  @apply bg-red-700 text-white;
+}
+.danger:hover {
+  @apply bg-red-900;
+}
+.danger:focus {
+  @apply focus:outline-none focus:ring focus:ring-red-400;
+}
